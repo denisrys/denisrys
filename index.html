@@ -1,12 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Testing</title>
-    <link rel="stylesheet" href="style.css">
+  <!--
+    Minimal, modern portfolio inspired by stripe.com
+    Replace [Your Name] and content as needed.
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Your Name] — Portfolio</title>
+  <meta name="description" content="[Your Name] — Software Developer. Clean, minimalist portfolio showcasing projects, skills, and contact information." />
+  <meta property="og:title" content="[Your Name] — Portfolio" />
+  <meta property="og:description" content="Clean, minimalist portfolio showcasing projects, skills, and contact information." />
+  <meta property="og:type" content="website" />
+
+  <!-- Inter font (primary) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚪️</text></svg>">
 </head>
 <body>
-    <h1>Test, hello world!</h1>
-    <p>Trying to host website using github.</p>
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header / Navigation (Sticky) ===== -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a class="brand" href="index.html" aria-label="Go to home">[Your Name]</a>
+
+      <!-- Mobile menu button -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <!-- Primary navigation -->
+      <nav id="primary-nav" class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero reveal">
+      <div class="container hero-inner">
+        <p class="eyebrow">Portfolio</p>
+        <h1 class="hero-title">[Your Name] — <span class="accent">Software Developer</span></h1>
+        <p class="hero-subtitle">
+          I build fast, accessible, and elegant web experiences. I blend engineering with thoughtful design
+          to solve real problems and create products users love.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="projects.html">View My Work</a>
+          <a class="btn btn-ghost" href="about.html">Learn more</a>
+        </div>
+
+        <!-- Subtle background flourish for depth -->
+        <div class="hero-blob" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ===== Featured Projects (Top 3) ===== -->
+    <section class="section reveal">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="muted">A quick look at a few selected builds.</p>
+        </div>
+
+        <div class="grid projects-featured">
+          <!-- Project card -->
+          <article class="card project-card">
+            <a class="card-media" href="projects.html" aria-label="View more about Project Alpha">
+              <img src="https://placehold.co/800x500/png?text=Project+Alpha" alt="Screenshot placeholder of Project Alpha" loading="lazy" />
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Project Alpha</h3>
+              <p class="card-text">A lightning-fast landing page with a11y-first design and crisp animations.</p>
+              <a class="card-link" href="projects.html">See all projects →</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <a class="card-media" href="projects.html" aria-label="View more about Insight Dashboard">
+              <img src="https://placehold.co/800x500/png?text=Insight+Dashboard" alt="Screenshot placeholder of Insight Dashboard app" loading="lazy" />
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Insight Dashboard</h3>
+              <p class="card-text">Data-rich dashboard with responsive charts and a polished UX.</p>
+              <a class="card-link" href="projects.html">See all projects →</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <a class="card-media" href="projects.html" aria-label="View more about Commerce Kit">
+              <img src="https://placehold.co/800x500/png?text=Commerce+Kit" alt="Screenshot placeholder of Commerce Kit storefront" loading="lazy" />
+            </a>
+            <div class="card-body">
+              <h3 class="card-title">Commerce Kit</h3>
+              <p class="card-text">Modern e‑commerce UI with frictionless checkout and clean code.</p>
+              <a class="card-link" href="projects.html">See all projects →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills & Expertise ===== -->
+    <section class="section section-alt reveal">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Skills &amp; Expertise</h2>
+          <p class="muted">Focused on quality, performance, and thoughtful interactions.</p>
+        </div>
+
+        <ul class="chips">
+          <li class="chip">JavaScript (ESNext)</li>
+          <li class="chip">TypeScript</li>
+          <li class="chip">React</li>
+          <li class="chip">Next.js</li>
+          <li class="chip">HTML5</li>
+          <li class="chip">CSS3 / Grid / Flexbox</li>
+          <li class="chip">Node.js</li>
+          <li class="chip">REST / GraphQL</li>
+          <li class="chip">Figma</li>
+          <li class="chip">Accessibility (WCAG)</li>
+          <li class="chip">Testing (Jest)</li>
+          <li class="chip">CI/CD</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <!-- Replace href values with your profiles -->
+        <a class="icon-link" href="#" target="_blank" rel="noopener" aria-label="GitHub">
+          <!-- GitHub icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.48 0-.24-.01-.86-.01-1.69-2.78.62-3.37-1.36-3.37-1.36-.46-1.19-1.12-1.5-1.12-1.5-.92-.64.07-.63.07-.63 1.02.07 1.56 1.07 1.56 1.07.9 1.58 2.36 1.12 2.94.85.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.13-4.56-5.03 0-1.11.39-2.01 1.03-2.72-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.04a9.33 9.33 0 0 1 5 0c1.9-1.31 2.74-1.04 2.74-1.04.55 1.41.2 2.45.1 2.71.64.71 1.02 1.61 1.02 2.72 0 3.91-2.34 4.76-4.57 5.01.36.31.68.92.68 1.86 0 1.34-.01 2.41-.01 2.74 0 .26.18.58.69.48A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a class="icon-link" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <!-- LinkedIn icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.94 6.5A2.44 2.44 0 1 1 4.5 4.06 2.44 2.44 0 0 1 6.94 6.5ZM4.75 8.75H9V20H4.75ZM13.5 8.75h4.01v1.53s1.26-1.83 4-1.83S24 10.99 24 14.58V20h-4.25v-4.61c0-2.84-1.36-3.33-2.26-3.33-1.9 0-2.74 1.24-2.74 3.33V20H10.5V8.75Z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a class="icon-link" href="#" target="_blank" rel="noopener" aria-label="X (Twitter)">
+          <!-- X icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2H21.5l-7.5 8.565L22.5 22h-6.18l-4.833-5.54L5.83 22H2.57l7.998-9.14L1.9 2h6.31l4.37 4.94L18.244 2Zm-2.16 18h2.033L7.99 4h-2.1l9.194 16Z"/></svg>
+          <span>X</span>
+        </a>
+      </div>
+      <p class="muted">© 2025 [Your Name]. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js" defer></script>
 </body>
 </html>
